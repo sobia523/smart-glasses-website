@@ -1,0 +1,31 @@
+
+> website-echosee@0.1.0 build
+> next build
+
+⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\TLS\package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * C:\Users\TLS\Downloads\website-echosee\package-lock.json
+
+▲ Next.js 16.2.4 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 21.2s
+  Running TypeScript ...
+Failed to type check.
+
+./components/Pricing.tsx:135:45
+Type error: Type '{ ringColor: string; } | {}' is not assignable to type 'CSSProperties | undefined'.
+  Object literal may only specify known properties, and 'ringColor' does not exist in type 'Properties<string | number, string & {}>'.
+
+  [90m133 |[0m ...                 plan.recommended ? [32m'ring-2'[0m : [32m''[0m
+  [90m134 |[0m ...               [32m}`[0m}
+[31m[1m>[0m [90m135 |[0m ...               style={plan.recommended ? { ringColor: [32m'var(--color-primary)'[0m } : {}}
+  [90m    |[0m                                               [31m[1m^[0m
+  [90m136 |[0m ...             >
+  [90m137 |[0m ...               <div className=[32m"mb-6"[0m>
+  [90m138 |[0m ...                 <h3 className=[32m"text-2xl font-bold mb-2"[0m style={{ color: [32m'var(--color-...[0m
+Next.js build worker exited with code: 1 and signal: null
