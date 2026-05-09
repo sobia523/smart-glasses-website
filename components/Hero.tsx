@@ -23,7 +23,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-white dark:bg-slate-900 w-full">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 w-full" style={{ backgroundColor: 'var(--background)' }}>
       {/* Subtle teal accent - top right */}
       <div
         className="absolute top-0 right-0 w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] opacity-10"
@@ -43,7 +43,7 @@ export default function Hero() {
               transition={{ duration: 0.6 }}
               className="inline-block mb-6 sm:mb-8"
             >
-              <div className="inline-flex items-center space-x-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-slate-100 dark:bg-slate-800 rounded-md border border-slate-200 dark:border-slate-700">
+              <div className="inline-flex items-center space-x-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-md border" style={{ backgroundColor: 'var(--color-neutral-100)', borderColor: 'var(--color-neutral-200)' }}>
                 <span className="w-2 h-2 rounded-full" style={{ background: 'var(--color-primary)' }} />
                 <span className="text-xs sm:text-sm font-semibold" style={{ color: 'var(--color-neutral-700)' }}>
                   Pre-Orders Now Open
@@ -161,7 +161,7 @@ export default function Hero() {
             className="relative mt-8 lg:mt-0"
           >
             <div className="relative surface-elevated p-6 sm:p-8 rounded-2xl">
-              <div className="aspect-square bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900 rounded-xl overflow-hidden flex items-center justify-center">
+              <div className="aspect-square rounded-xl overflow-hidden flex items-center justify-center" style={{ background: 'linear-gradient(135deg, var(--color-neutral-100), var(--color-neutral-200))' }}>
                 <HeroGlasses className="w-4/5 h-4/5" />
               </div>
 

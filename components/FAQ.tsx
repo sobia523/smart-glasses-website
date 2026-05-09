@@ -69,7 +69,7 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="py-12 sm:py-16 md:py-20 lg:py-24 bg-slate-50 dark:bg-slate-900">
+    <section id="faq" className="py-12 sm:py-16 md:py-20 lg:py-24" style={{ backgroundColor: 'var(--background)' }}>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -171,8 +171,8 @@ export default function FAQ() {
           </p>
           <a
             href="#contact"
-            className="inline-block px-8 py-3 bg-white font-semibold rounded-lg transition-smooth"
-            style={{ color: 'var(--color-primary)' }}
+            className="inline-block px-8 py-3 font-semibold rounded-lg transition-smooth"
+            style={{ backgroundColor: 'white', color: 'var(--color-primary)' }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = 'translateY(-2px)';
               e.currentTarget.style.boxShadow = 'var(--shadow-lg)';

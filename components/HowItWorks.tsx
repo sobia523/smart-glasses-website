@@ -36,7 +36,7 @@ export default function HowItWorks() {
   });
 
   return (
-    <section id="how-it-works" className="relative py-12 sm:py-16 md:py-20 lg:py-24 bg-slate-50 dark:bg-slate-900">
+    <section id="how-it-works" className="relative py-12 sm:py-16 md:py-20 lg:py-24" style={{ backgroundColor: 'var(--background)' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -88,7 +88,8 @@ export default function HowItWorks() {
               <motion.div
                 animate={{ x: ['0%', '100%'] }}
                 transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
-                className="absolute top-1/2 -translate-y-1/2 w-3 h-3 bg-white rounded-full shadow-lg"
+                className="absolute top-1/2 -translate-y-1/2 w-3 h-3 rounded-full shadow-lg"
+                style={{ backgroundColor: 'var(--foreground)' }}
               />
             </motion.div>
           </div>
@@ -130,7 +131,7 @@ export default function HowItWorks() {
                       initial={{ scale: 0 }}
                       animate={inView ? { scale: 1 } : {}}
                       transition={{ delay: step.delay + 0.3, type: 'spring' }}
-                      className="w-20 h-20 rounded-2xl flex items-center justify-center mb-6 shadow-lg"
+                      className="w-20 h-20 rounded-2xl flex items-center justify-center mb-6 shadow-lg mx-auto"
                       style={{ backgroundColor: 'var(--color-primary)' }}
                     >
                       <step.icon className="text-white text-3xl" />
@@ -195,9 +196,8 @@ export default function HowItWorks() {
               transition={{ delay: 1, type: 'spring', stiffness: 200 }}
               className="relative"
             >
-              <div className="flex items-center justify-center mb-3">
                 <div
-                  className="w-12 h-12 rounded-xl flex items-center justify-center mr-3"
+                  className="w-12 h-12 rounded-xl flex items-center justify-center mb-3 mx-auto"
                   style={{ backgroundColor: 'var(--color-accent)' }}
                 >
                   <FiZap className="text-white text-2xl" />
@@ -205,10 +205,9 @@ export default function HowItWorks() {
                 <div className="text-4xl font-bold" style={{ color: 'var(--color-primary)' }}>
                   &lt;100ms
                 </div>
-              </div>
-              <div className="text-sm font-medium" style={{ color: 'var(--color-neutral-600)' }}>
-                Processing Time
-              </div>
+                <div className="text-sm font-medium" style={{ color: 'var(--color-neutral-600)' }}>
+                  Processing Time
+                </div>
             </motion.div>
 
             <motion.div

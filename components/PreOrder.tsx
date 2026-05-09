@@ -52,7 +52,7 @@ export default function PreOrder() {
   };
 
   return (
-    <section id="pre-order" className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white dark:bg-slate-900">
+    <section id="pre-order" className="py-12 sm:py-16 md:py-20 lg:py-24" style={{ backgroundColor: 'var(--background)' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

@@ -70,10 +70,28 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: var(--color-neutral-900);
-    --foreground: var(--color-neutral-50);
-    --surface: var(--color-neutral-800);
-    --surface-elevated: var(--color-neutral-700);
+    /* Redefine neutrals for dark mode - swapping lightness */
+    --color-neutral-50: oklch(15% 0.01 195);
+    --color-neutral-100: oklch(20% 0.01 195);
+    --color-neutral-200: oklch(28% 0.01 195);
+    --color-neutral-300: oklch(38% 0.01 195);
+    --color-neutral-400: oklch(50% 0.01 195);
+    --color-neutral-500: oklch(62% 0.01 195);
+    --color-neutral-600: oklch(75% 0.01 195);
+    --color-neutral-700: oklch(82% 0.01 195);
+    --color-neutral-800: oklch(90% 0.01 195);
+    --color-neutral-900: oklch(96% 0.01 195);
+
+    --background: var(--color-neutral-50);
+    --foreground: var(--color-neutral-900);
+    --surface: var(--color-neutral-100);
+    --surface-elevated: var(--color-neutral-200);
+
+    /* Shadows for dark mode - darker and more subtle */
+    --shadow-sm: 0 1px 2px 0 oklch(5% 0.007 195 / 0.5);
+    --shadow-md: 0 4px 6px -1px oklch(5% 0.007 195 / 0.6);
+    --shadow-lg: 0 10px 15px -3px oklch(5% 0.007 195 / 0.7);
+    --shadow-xl: 0 20px 25px -5px oklch(5% 0.007 195 / 0.8);
   }
 }
 
@@ -454,7 +472,9 @@ p {
     transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     overflow: hidden;
     cursor: pointer;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     text-decoration: none;
     user-select: none;

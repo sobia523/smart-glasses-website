@@ -54,7 +54,7 @@ export default function ProductPage() {
   });
 
   return (
-    <section id="product" className="relative py-12 sm:py-16 md:py-20 lg:py-24 bg-slate-50 dark:bg-slate-900">
+    <section id="product" className="relative py-12 sm:py-16 md:py-20 lg:py-24" style={{ backgroundColor: 'var(--background)' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -305,14 +305,16 @@ export default function ProductPage() {
                 className="aspect-video rounded-xl sm:rounded-2xl overflow-hidden flex items-center justify-center relative"
                 style={{ backgroundColor: 'var(--color-primary)' }}
               >
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="absolute inset-0 opacity-20">
+                <div className="absolute inset-0 z-10 flex items-center justify-center">
+                  {/* Background Illustration */}
+                  <div className="absolute inset-0 opacity-20 pointer-events-none">
                     <ProductGlasses3D className="w-full h-full" />
                   </div>
 
-                  <div className="relative z-10 text-white text-center px-4 w-full flex flex-col items-center justify-center">
+                  {/* Centered Group (Icon + Text) */}
+                  <div className="relative z-10 text-white text-center px-4 flex flex-col items-center justify-center">
                     <motion.div
-                      className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center mb-4 sm:mb-6 border-2 border-white/30 transition-smooth"
+                      className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center mt-4 mb-3 sm:mb-4 border-2 border-white/30 transition-smooth"
                       style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }}
                       whileHover={{
                         scale: 1.1,
@@ -321,7 +323,7 @@ export default function ProductPage() {
                       whileTap={{ scale: 0.95 }}
                     >
                       <svg
-                        className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12"
+                        className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-white"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                         style={{ marginLeft: '2px' }}
@@ -329,15 +331,17 @@ export default function ProductPage() {
                         <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
                       </svg>
                     </motion.div>
-                    <p className="text-lg sm:text-xl md:text-2xl font-bold mb-1 sm:mb-2 text-center">Watch Demo Video</p>
-                    <p className="text-sm sm:text-base md:text-lg text-white/80 text-center">See EchoSee in action</p>
+                    
+                    <h4 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">Watch Demo Video</h4>
+                    <p className="text-sm sm:text-base md:text-lg text-white/80">See EchoSee in action</p>
                   </div>
-                </div>
 
-                <div className="absolute top-3 right-3 sm:top-4 sm:right-4 md:top-6 md:right-6 px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 rounded-full text-white text-xs sm:text-sm font-semibold"
-                  style={{ backgroundColor: 'rgba(0, 0, 0, 0.3)', backdropFilter: 'blur(8px)' }}
-                >
-                  2:30
+                  {/* Duration Badge */}
+                  <div className="absolute top-3 right-3 sm:top-4 sm:right-4 px-2 py-1 sm:px-3 sm:py-1.5 rounded-full text-white text-xs sm:text-sm font-semibold"
+                    style={{ backgroundColor: 'rgba(0, 0, 0, 0.3)', backdropFilter: 'blur(8px)' }}
+                  >
+                    2:30
+                  </div>
                 </div>
               </div>
             </div>
